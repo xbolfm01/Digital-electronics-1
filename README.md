@@ -1,6 +1,12 @@
 # Digital-electronics-1
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Bunka1  | Bunka2 |
-| Bunka3  | Bunka4  |
+| **A** | **NOT** |
+| :-: | :-:|
+|0| 1 |
+| 1  | 0  |
+
+
+| **A** | **B** || **AND** | **NAND** |
+| :-: | :-:|| :-: | :-:|
+| 0 |  0 ||  0  |  1  |
+| 1  |  0  |
