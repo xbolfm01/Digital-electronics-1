@@ -1,6 +1,6 @@
 # Digital-electronics-1
 
-Schéma zapojenia : 
+**Scheme :** 
 ![01-gates](https://user-images.githubusercontent.com/60688750/74787320-2adb7000-52af-11ea-9fea-90068f857e27.png)
   
 | **A** | **NOT** |
@@ -29,7 +29,14 @@ Schéma zapojenia :
 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 0 | 1 |
 
-DeMorgan´s Laws : 
+**DeMorgan´s Laws :** 
 
 ![Bez názvu](https://user-images.githubusercontent.com/60688750/74787775-514ddb00-52b0-11ea-9f9d-4395ee94dd52.png)
 
+**Truth table for this function :** 
+| **A** | **B** |**C** | **f** | **fAND** |**fOR** |
+| :-: | :-: | :-: | :-: |
+| 0 | 0 | 0 | 1 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 0 |
