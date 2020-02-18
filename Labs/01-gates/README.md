@@ -1,22 +1,7 @@
 # Digital-electronics-1
 
-| **A** | **NOT** |
-| :-: | :-:|
-|0| 1 |
-| 1  | 0  |
-
-DeMorgan pravidla - pravdivostná tabulka : 
-
-  | **A** | **B** |**C** | **f** | **fAND** | **fOR** |
-  | :-: | :-: | :-: | :-: | :-: | :-: |
-  | 0 | 0 | 0 | 1 | 1 | 1 |
-  | 0 | 0 | 1 | 0 | 0 | 0 |
-  | 0 | 1 | 0 | 0 | 0 | 0 |
-  | 0 | 1 | 1 | 0 | 0 | 0 |
-  | 1 | 0 | 0 | 1 | 1 | 1 |
-  | 1 | 0 | 1 | 1 | 1 | 1 |
-  | 1 | 1 | 0 | 0 | 0 | 0 |
-  | 1 | 1 | 1 | 0 | 0 | 0 |
+Schéma zapojenia : 
+![and_gates](../../C:\Users\marek\Desktop\Marek\FEKT\BPC-DE1\Cp\01-gates)
   
 | **A** | **NOT** |
 | :-: | :-: |
