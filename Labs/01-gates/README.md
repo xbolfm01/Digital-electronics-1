@@ -1,7 +1,7 @@
 # Digital-electronics-1
 
 Schéma zapojenia : 
-![and_gates](../../C:\Users\marek\Desktop\Marek\FEKT\BPC-DE1\Cp\01-gates)
+![and_gates](../../FEKT/BPC-DE1/Cp/01-gates)
   
 | **A** | **NOT** |
 | :-: | :-: |
