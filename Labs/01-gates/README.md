@@ -1,7 +1,7 @@
 # Digital-electronics-1
 
 Schéma zapojenia : 
-
+![01-gates](https://user-images.githubusercontent.com/60688750/74787320-2adb7000-52af-11ea-9fea-90068f857e27.png)
   
 | **A** | **NOT** |
 | :-: | :-: |
