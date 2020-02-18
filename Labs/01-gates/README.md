@@ -1,9 +1,7 @@
 # Digital-electronics-1
 
 Schéma zapojenia : 
-<div align="center">
-    <img src="Users\marek\Desktop\Marek\FEKT\BPC-DE1\Cp\01-gates" width="400px"</img> 
-</div>
+[!(image)(C:\Users\marek\Desktop\Marek\FEKT\BPC-DE1\Cp\01-gates)]
   
 | **A** | **NOT** |
 | :-: | :-: |
