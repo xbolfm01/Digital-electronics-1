@@ -98,17 +98,8 @@ begin
     HEX2SSEG: entity work.hex_to_7seg
         port map (
                   -- WRITE YOUR CODE HERE
-						hex_i => s_result,
-						hex_i(2) => s_result(1),
-						hex_i(3) => s_result(2),
-						hex_i(4) => s_result(3),
-						disp_seg_o(1) =>  disp_dig_o(1),
-						disp_seg_o(2) =>  disp_dig_o(2),
-						disp_seg_o(3) =>  disp_dig_o(3),
-						disp_seg_o(4) =>  disp_dig_o(4),
-						disp_seg_o(5) =>  disp_dig_o(5),
-						disp_seg_o(6) =>  disp_dig_o(6),
-						disp_seg_o(7) =>  disp_dig_o(7),
+		   hex_i => s_result,
+		   seg_o => disp_seg_o
 						
 						
 					
@@ -120,8 +111,17 @@ begin
 
     -- Show carry output bit on Coolrunner-II LED
     -- WRITE YOUR CODE HERE
+	LD0 <= s_carryOut;
 
     -- Show two 4-bit inputs on CPLD expansion LEDs
     -- WRITE YOUR CODE HERE
+	LD0_CPLD <= SW0_CPLD;
+	 LD1_CPLD <= SW1_CPLD;
+	 LD2_CPLD <= SW2_CPLD;
+	 LD3_CPLD <= SW3_CPLD;
+	 LD8_CPLD <= SW8_CPLD;
+	 LD9_CPLD <= SW9_CPLD;
+	 LD10_CPLD <= SW10_CPLD;
+	 LD11_CPLD <= SW11_CPLD;
 
 end architecture Behavioral;
