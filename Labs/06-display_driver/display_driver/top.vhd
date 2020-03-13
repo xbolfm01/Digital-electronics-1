@@ -42,9 +42,26 @@ begin
     -- WRITE YOUR CODE HERE
     
     
+    
+    
 
     --------------------------------------------------------------------
     -- Sub-block of driver_7seg entity
     --- WRITE YOUR CODE HERE
+  
+    
+    driver_7seg : entity work.driver_7seg
+       port map {
+                    clk_i <= clk_i,
+                    srst_n_i <= BNT0,
+                    data0_i <= s_data0,
+                    data1_i <= s_data1,
+                    data2_i <= s_data2,
+                    data3_i <= s_data3,
+                    dp_o <= disp_dp,
+                    seg_o <= disp_seg_o,
+                    dig_o <= disp_dig_o
+    );
+
 
 end architecture Behavioral;
