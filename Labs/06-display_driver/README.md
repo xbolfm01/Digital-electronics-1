@@ -1,6 +1,7 @@
 **Homework**
 
-**Segment timing  : **
+**Segment timing  :**
+![picture_segment_timing](https://user-images.githubusercontent.com/60688750/76663738-440bcf80-6582-11ea-893f-a9f3a8f49b0a.png)
 
 
 **Segment timing - Code :**
