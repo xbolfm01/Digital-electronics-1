@@ -99,22 +99,26 @@ begin
             s_hex <= data0_i;
             dp_o  <= dp_i(0);
             dig_o <= "1110";
+            
         when "01" =>
             -- WRITE YOUR CODE HERE
             s_hex <= data1_i;
             dp_o  <= dp_i(1);
             dig_o <= "1101";
+
         when "10" =>
             -- WRITE YOUR CODE HERE
             s_hex <= data2_i;
             dp_o  <= dp_i(2);
             dig_o <= "1011";
+
         when others =>
             -- WRITE YOUR CODE HERE
             s_hex <= data3_i;
             dp_o  <= dp_i(3);
             dig_o <= "0111";
         end case;
+            
     end process p_mux;
 
 end architecture Behavioral;
