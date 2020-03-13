@@ -40,7 +40,8 @@ begin
 
     -- Combine 4-bit inputs to internal signals
     -- WRITE YOUR CODE HERE
-
+    
+    
 
     --------------------------------------------------------------------
     -- Sub-block of driver_7seg entity
