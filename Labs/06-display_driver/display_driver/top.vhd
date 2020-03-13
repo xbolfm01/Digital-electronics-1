@@ -46,7 +46,7 @@ begin
     s_data0(2) <= SW2_CPLD;
     s_data0(3) <= SW3_CPLD;
 
-	s_data1(0) <= SW4_CPLD;
+    s_data1(0) <= SW4_CPLD;
     s_data1(1) <= SW5_CPLD;
     s_data1(2) <= SW6_CPLD;
     s_data1(3) <= SW7_CPLD;
