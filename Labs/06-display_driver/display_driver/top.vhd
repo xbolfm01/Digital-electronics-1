@@ -71,7 +71,7 @@ begin
     driver_7seg : entity work.driver_7seg
     port map (
     	clk_i <= clk_i,
-		srst_n_i <= BNT0,
+		srst_n_i <= BTN0,
 		data0_i <= s_data0,
 		data1_i <= s_data1,
 		data2_i <= s_data2,
