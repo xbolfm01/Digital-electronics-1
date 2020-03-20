@@ -1,2 +1,2 @@
 **Simulácia :** 
-![simulacia](https://user-images.githubusercontent.com/60688750/77208490-34e5ce00-6afc-11ea-8528-c2f58fec6072.png)
+![simulacia1](https://user-images.githubusercontent.com/60688750/77209135-c43fb100-6afd-11ea-8e65-34c783e69b46.png)
