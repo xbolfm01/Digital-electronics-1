@@ -1,8 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
-
- 
 ENTITY stopwatch_testbench IS
 END stopwatch_testbench;
  
@@ -55,7 +53,7 @@ BEGIN
         );
 
    -- Clock process definitions
-   clk_i_process :process
+   clk_i_process : process
    begin
 	clk_i <= '0';
 	wait for clk_i_period/2;
