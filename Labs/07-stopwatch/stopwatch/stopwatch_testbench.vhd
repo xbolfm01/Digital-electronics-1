@@ -57,10 +57,10 @@ BEGIN
    -- Clock process definitions
    clk_i_process :process
    begin
-					clk_i <= '0';
-					wait for clk_i_period/2;
-					clk_i <= '1';
-					wait for clk_i_period/2;
+	clk_i <= '0';
+	wait for clk_i_period/2;
+	clk_i <= '1';
+	wait for clk_i_period/2;
    end process;
  
    -- Stimulus process
@@ -74,11 +74,11 @@ stim_proc: process
 		wait for clk_i_period;
       srst_n_i <= '1'; 
 		
-		for i in 0 to 50000 loop
-			 ce_100Hz_i <= '1';
-			 wait for clk_i_period*1;			
-			 ce_100Hz_i <= '0';
-			 wait for clk_i_period*99;
+      for i in 0 to 50000 loop
+	ce_100Hz_i <= '1';
+	wait for clk_i_period*1;			
+	ce_100Hz_i <= '0';
+	wait for clk_i_period*99;
 		 
 	end loop;
 	wait;
