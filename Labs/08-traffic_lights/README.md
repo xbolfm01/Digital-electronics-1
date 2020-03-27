@@ -1,1 +1,1 @@
-**Simulácia :*
+**Simulácia :**
