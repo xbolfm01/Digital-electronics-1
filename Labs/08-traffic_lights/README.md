@@ -17,4 +17,5 @@ Vidíme, že keď signál count dopočítal pri stave EWred2_NSred2, čo je ako 
 
 
 ### Top_level_schematic : 
+
 ![Top_schematic](https://user-images.githubusercontent.com/60688750/77802732-ccf33280-707b-11ea-9ca0-f2f42fdadb2b.jpg)
