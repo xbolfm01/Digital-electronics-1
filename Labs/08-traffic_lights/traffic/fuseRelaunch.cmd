@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/marek/Desktop/Marek/FEKT/BPC-DE1/Cp/Digital-electronics-1/Labs/08-traffic_lights/traffic/traffic_testbench_isim_beh.exe" -prj "C:/Users/marek/Desktop/Marek/FEKT/BPC-DE1/Cp/Digital-electronics-1/Labs/08-traffic_lights/traffic/traffic_testbench_beh.prj" "work.traffic_testbench" 
