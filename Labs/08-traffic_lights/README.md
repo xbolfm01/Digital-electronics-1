@@ -13,8 +13,8 @@ Vidíme, že keď signál count dopočítal pri stave EWred2_NSred2, čo je ako 
 ![Simulacia-2-restart](https://user-images.githubusercontent.com/60688750/77792490-c0b1aa00-7068-11ea-8186-701dc338c239.png)
 
 ### FSM Diagram : 
-![Diagram](https://user-images.githubusercontent.com/60688750/77802474-3a529380-707b-11ea-89de-4b749611d7a6.jpg)
+![Diagram](https://user-images.githubusercontent.com/60688750/77802736-ce245f80-707b-11ea-964a-78e7dba91827.jpg)
 
 
 ### Top_level_schematic : 
-![Top_schematic](https://user-images.githubusercontent.com/60688750/77802476-3cb4ed80-707b-11ea-94ff-53175d6b07e2.jpg)
+![Top_schematic](https://user-images.githubusercontent.com/60688750/77802732-ccf33280-707b-11ea-9ca0-f2f42fdadb2b.jpg)
