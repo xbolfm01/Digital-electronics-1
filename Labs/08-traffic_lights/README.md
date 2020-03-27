@@ -1,1 +1,6 @@
-**Simulácia :**
+**Priebeh simulácie  :**
+Ak signál count dopočíta do svojej maximálnej hodnoty (SEC 1 => 0011 a SEC5 => 1111), tak automaticky prejde do ďalšieho stavu.
+![Simulacia-1](https://user-images.githubusercontent.com/60688750/77792467-b8f20580-7068-11ea-8f81-26ff487b18c6.png)
+
+Vidíme, že keď signál count dopočítal pri stave EWred2_NSred2, čo je ako posledný stav, do maximálnej hodnoty 0011 (SEC 1), tak sa cyklus znova opakuje a začína sa od stavu EWred_NSgreen, ktorý je ako prvý.  
+![Simulacia-2-restart](https://user-images.githubusercontent.com/60688750/77792490-c0b1aa00-7068-11ea-8186-701dc338c239.png)
