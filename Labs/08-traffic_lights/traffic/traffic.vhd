@@ -97,7 +97,7 @@ begin
 				
 	definicia_svetiel : process (state)
 			begin 
-				case state is								 --RYGRYG--		 
+				case state is				  --RYGRYG--		 
 					when EWred_NSgreen  => lights_o <= "100001"; 
 					when EWred_NSyellow => lights_o <= "100010";
 					when EWred_NSred 	  => lights_o <= "100100";
