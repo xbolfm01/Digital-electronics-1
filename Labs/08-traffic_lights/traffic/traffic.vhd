@@ -8,6 +8,7 @@ entity traffic is
 				-- Inputs
 				clk_i : in std_logic; 		-- clock signal
 				srst_n_i : in std_logic; 	-- reset aktivny v 0
+				ce_2Hz_i : in std_logic; 	-- zmena frekvencie z 3Hz na 2 Hz
 				
 				-- Outputs
 				lights_o : out std_logic_vector (5 downto 0)
@@ -20,18 +21,19 @@ architecture Behavioral of traffic is
 type   state_type is (EWred_NSgreen, EWred_NSyellow, EWred_NSred, EWgreen_NSred, EWyellow_NSred, EWred2_NSred2); 
 signal state : state_type;
 signal count : unsigned(3 downto 0);
-constant SEC5: unsigned(3 downto 0) := "1111";
-constant SEC1: unsigned(3 downto 0) := "0011";  
+constant SEC5: unsigned(3 downto 0) := "1001"; -- počíta sa len do 9 (1001) nie do 15 (1111) --> 10 period za 5 sekund
+constant SEC1: unsigned(3 downto 0) := "0001"; -- počíta sa len do 1, nie do 3 --> 2 periody za sekundu 
 
 begin
-	traffic_lights : process (clk_i, srst_n_i)
+	traffic_lights : process (clk_i)
 		begin
 			
+		if rising_edge (clk_i) then
 			if srst_n_i = '0' then
 				count <= "0000";			
 				state <= EWred_NSgreen;
 				
-				elsif rising_edge(clk_i) and srst_n_i = '1'  then
+				elsif ce_2Hz_i = '1' then
 					case state is 
 							
 							when EWred_NSgreen => 
@@ -93,6 +95,7 @@ begin
 									
 						end case;
 					end if;
+				end if;
 	end process traffic_lights;
 				
 	definicia_svetiel : process (state)
@@ -100,11 +103,11 @@ begin
 				case state is				  --RYGRYG--		 
 					when EWred_NSgreen  => lights_o <= "100001"; 
 					when EWred_NSyellow => lights_o <= "100010";
-					when EWred_NSred 	  => lights_o <= "100100";
+					when EWred_NSred    => lights_o <= "100100";
 					when EWgreen_NSred  => lights_o <= "001100";
 					when EWyellow_NSred => lights_o <= "010100";
 					when EWred2_NSred2  => lights_o <= "100100";
-					when others 		  => lights_o <= "100001";
+					when others         => lights_o <= "100001";
 				end case;
 	end process definicia_svetiel;
 	
