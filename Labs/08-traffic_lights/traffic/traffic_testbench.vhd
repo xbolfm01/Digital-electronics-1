@@ -17,6 +17,7 @@ ARCHITECTURE behavior OF traffic_testbench IS
     PORT(
          clk_i : IN  std_logic;
          srst_n_i : IN  std_logic;
+	 ce_2Hz_i : IN std_logic;
          lights_o : OUT  std_logic_vector(5 downto 0)
         );
     END COMPONENT;
@@ -25,11 +26,12 @@ ARCHITECTURE behavior OF traffic_testbench IS
    --Inputs
    signal clk_i : std_logic := '0';
    signal srst_n_i : std_logic := '0';
+   signal ce_2Hz_i : std_logic :='0';
 
  	--Outputs
    signal lights_o : std_logic_vector(5 downto 0);
 	
-	constant clk_i_period : time := 100 us;
+	constant clk_i_period : time := 10 ns;
 
 BEGIN
  
@@ -38,6 +40,7 @@ BEGIN
 		 (
           clk_i => clk_i,
           srst_n_i => srst_n_i,
+			 ce_2Hz_i => ce_2Hz_i,
           lights_o => lights_o
         );
 
@@ -49,21 +52,26 @@ BEGIN
 			clk_i <= '1';
 			wait for clk_i_period/2;
 			end process;
+			
+	ce_2Hz_i_process :process
+   begin
+		ce_2Hz_i <= '0';
+		wait for clk_i_period;
+		ce_2Hz_i <= '1';
+		wait for clk_i_period;
+   end process;
  
-	stim_proc: process
-		begin	
-   	  
-      srst_n_i <= '1';
-      wait until rising_edge(clk_i);
-      wait until rising_edge(clk_i);
-      
+   stim_proc: process
+   begin
+	
+		srst_n_i <= '1';
+			wait until rising_edge(clk_i);
+			wait until rising_edge(clk_i);
 		srst_n_i <= '0';
-      wait until rising_edge(clk_i);
-      wait until rising_edge(clk_i);
-      wait until rising_edge(clk_i);
-     
-	   srst_n_i <= '1';
-      
+			wait until rising_edge(clk_i);
+			wait until rising_edge(clk_i);
+			wait until rising_edge(clk_i);
+      srst_n_i <= '1';
       wait;
    end process;
 
