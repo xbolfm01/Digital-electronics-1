@@ -25,5 +25,9 @@ Komponent top sa skladá z jednotlivých častí, sú to comparator, driver_7seg
 ![top_scheme](https://user-images.githubusercontent.com/60688750/80761938-d456a180-8b3b-11ea-83ed-be1ee10a47d0.jpg)
 
 ### 3. Princíp PWM so signálmi na našom projekte : 
-Na obrázku vidíme princíp PWM. Červená je komparačná úroveň, šedý je referenčný signál a zelený je výstup signálu ledHelp2. 
+Na obrázku vidíme princíp PWM. Červená je komparačná úroveň, šedý je referenčný signál a zelený je výstup signálu ledHelp2. Môžeme z obrázku vidieť, že čím menšia je úroveň (červená), tým dlhšie ostáva výstup ledHelp2 (zelený) v 1. V reále to znamená, že LED bude sa bude stále viac a viac stmavovať až úplne zhasne. LED v 0 = svieti , LED v 1 = nesvieti. 
 ![PWM](https://user-images.githubusercontent.com/60688750/80762310-9312c180-8b3c-11ea-9a6a-fab0cfe2ac7c.jpg)
+
+### 4. Simulácia : 
+Na simulácii môžeme vidieť, že pri stlačení tlačidla (btn išlo do 0) išiel do 0 aj signál reprezentujúci led (led išiel do 0). Paralelne s týmto sa odštartoval časovač (signál countinStart išiel do 1) a vypol sa časovač countingDone (countingDone išiel do 0). Takisto môžeme vidieť peaky v signále btnFlag, čo znamená, že tlačidlo bolo stlačené. 
+![Simulation - Pressed button](https://user-images.githubusercontent.com/60688750/80762603-23e99d00-8b3d-11ea-8bdb-b3331e90ce83.png)
