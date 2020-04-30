@@ -23,3 +23,7 @@ Komponent top sa skladá z jednotlivých častí, sú to comparator, driver_7seg
 
 ### 2. Schéma zapojenia Topu :
 ![top_scheme](https://user-images.githubusercontent.com/60688750/80761938-d456a180-8b3b-11ea-83ed-be1ee10a47d0.jpg)
+
+### 3. Princíp PWM so signálmi na našom projekte : 
+Na obrázku vidíme princíp PWM. Červená je komparačná úroveň, šedý je referenčný signál a zelený je výstup signálu ledHelp2. 
+![PWM](https://user-images.githubusercontent.com/60688750/80762310-9312c180-8b3c-11ea-9a6a-fab0cfe2ac7c.jpg)
