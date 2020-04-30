@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/marek/Desktop/xbolfm01/PWM_Dimmer/comparator_isim_beh.exe" -prj "C:/Users/marek/Desktop/xbolfm01/PWM_Dimmer/comparator_beh.prj" "work.comparator" 

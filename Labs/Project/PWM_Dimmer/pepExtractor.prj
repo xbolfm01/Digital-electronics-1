@@ -1,0 +1,7 @@
+work	"binary_cnt.vhd"
+work	"clock_enable.vhd"
+work	"comparator.vhd"
+work	"counter_down.vhd"
+work	"driver_7seg.vhd"
+work	"hex_to_7seg.vhd"
+work	"top.vhd"

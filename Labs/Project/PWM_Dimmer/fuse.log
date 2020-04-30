@@ -1,0 +1,10 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/marek/Desktop/xbolfm01/PWM_Dimmer/comparator_isim_beh.exe -prj C:/Users/marek/Desktop/xbolfm01/PWM_Dimmer/comparator_beh.prj work.comparator 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/marek/Desktop/xbolfm01/PWM_Dimmer/comparator.vhd" into library work
+Starting static elaboration
+ERROR:HDLCompiler:432 - "C:/Users/marek/Desktop/xbolfm01/PWM_Dimmer/comparator.vhd" Line 6: Formal <nbitrefin> has no actual or default value.
+ERROR:HDLCompiler:432 - "C:/Users/marek/Desktop/xbolfm01/PWM_Dimmer/comparator.vhd" Line 7: Formal <nbitsetin> has no actual or default value.
+ERROR:Simulator:777 - Static elaboration of top level VHDL design unit comparator in library work failed
