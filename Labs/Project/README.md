@@ -33,5 +33,14 @@ Na simulácii môžeme vidieť, že pri stlačení tlačidla (btn išlo do 0) i�
 ![Simulation - Pressed button](https://user-images.githubusercontent.com/60688750/80762603-23e99d00-8b3d-11ea-8bdb-b3331e90ce83.png)
 
 
-### 5. Záver  : 
+### 5. Záver :
 Dokázali sme, že pri stlačení tlačidla, sa LED automaticky rozsvieti. Čo sa nám už nepodarilo pri simulácii dokázať je to, že po čase sa LED automaticky začne vypínať. Paradoxom je, že keď sme projekt nahrali do dosky tak tam to fungovalo, viď video. 
+
+### 6. Video :
+https://www.youtube.com/watch?v=I9aNll9A6zU
+
+### 7. Zdroje :
+Predchádzajúce cvičenie od pána doc.Frýzu
+https://www.digikey.com/eewiki/pages/viewpage.action?pageId=62259228
+https://en.wikipedia.org/wiki/Pulse-width_modulation
+6.
