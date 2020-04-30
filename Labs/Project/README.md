@@ -37,9 +37,11 @@ Na simulácii môžeme vidieť, že pri stlačení tlačidla (btn išlo do 0) i�
 Dokázali sme, že pri stlačení tlačidla, sa LED automaticky rozsvieti. Čo sa nám už nepodarilo pri simulácii dokázať je to, že po čase sa LED automaticky začne vypínať. Paradoxom je, že keď sme projekt nahrali do dosky tak tam to fungovalo, viď video. 
 
 ### 6. Video :
+Na videu simulujeme natočenie enkóderom tlačidlami, ktorými nastavíme čas.
 https://www.youtube.com/watch?v=I9aNll9A6zU
 
 ### 7. Zdroje :
 Predchádzajúce cvičenie od pána doc.Frýzu
 https://www.digikey.com/eewiki/pages/viewpage.action?pageId=62259228
 https://en.wikipedia.org/wiki/Pulse-width_modulation
+https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/
