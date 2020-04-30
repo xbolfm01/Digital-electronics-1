@@ -42,6 +42,7 @@ https://www.youtube.com/watch?v=I9aNll9A6zU
 
 ### 7. Zdroje :
 Predchádzajúce cvičenie od pána doc.Frýzu
+
 https://www.digikey.com/eewiki/pages/viewpage.action?pageId=62259228
 https://en.wikipedia.org/wiki/Pulse-width_modulation
 https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/
