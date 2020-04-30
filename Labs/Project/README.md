@@ -31,3 +31,7 @@ Na obrázku vidíme princíp PWM. Červená je komparačná úroveň, šedý je 
 ### 4. Simulácia : 
 Na simulácii môžeme vidieť, že pri stlačení tlačidla (btn išlo do 0) išiel do 0 aj signál reprezentujúci led (led išiel do 0). Paralelne s týmto sa odštartoval časovač (signál countinStart išiel do 1) a vypol sa časovač countingDone (countingDone išiel do 0). Takisto môžeme vidieť peaky v signále btnFlag, čo znamená, že tlačidlo bolo stlačené. 
 ![Simulation - Pressed button](https://user-images.githubusercontent.com/60688750/80762603-23e99d00-8b3d-11ea-8bdb-b3331e90ce83.png)
+
+
+### 5. Záver  : 
+Dokázali sme, že pri stlačení tlačidla, sa LED automaticky rozsvieti. Čo sa nám už nepodarilo pri simulácii dokázať je to, že po čase sa LED automaticky začne vypínať. Paradoxom je, že keď sme projekt nahrali do dosky tak tam to fungovalo, viď video. 
