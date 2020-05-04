@@ -2,7 +2,8 @@
 ## Zadanie projektu :
 PWM stmievač s nastaviteľnou dobou načasovania s rotačným enkoderom KY-040 s tlačítkom. Po uplynutí zadanej doby sa výstup zo 100% plynulo stlmí na nulu.
 
-
+------------------------------------------------------------------------------------------------------------------------------------
+Tento projekt je oproti projektu, ktorý tu bol na nahraný vo štvrtok, opravený a funguje tu PWM. Problém s PWM bol spôsobený chybou v kóde v súbore top.vhd. 
 ### 1. Popis kódu :
 Comparator :
 Slúži nám na porovnávanie úrovní pri postupnom zhášaní LED. Vstupy do comparatoru sú refIn a setIn. Vstupom setIn nastavujeme úroveň. Tam kde je setIn vyššia ako refIn, má výstupná premenná hodnotu 0 (LED svieti), v opačnom prípade má hodnotu 1 (LED nesvieti). Viď obrázok PWM.
@@ -50,7 +51,7 @@ LED je už takmer úplne ustálená v hodnote 1, čiže už takmer vôbec nesvie
 ![Sim 4](https://user-images.githubusercontent.com/60688750/80929664-2999e980-8dae-11ea-82fc-4ebaf909cdd7.png)
 
 ##### [Obrázok simulácie - 5] 
-Vidíme, že komparačná úroveň dosiahla "0000000000", čo znamená, že je úplne na minime. Tým pádom musí byť LED už úplne zhasnutá, to môžeme vidieť na signále led, že teraz je už úplne ustálená v hodnote 1.
+Vidíme, že komparačná úroveň dosiahla "0000000000", čo znamená, že je úplne na minime (viď bod 3 Princíp PWM). Tým pádom musí byť LED už úplne zhasnutá, to môžeme vidieť na signále led, že teraz je už úplne ustálená v hodnote 1.
 
 ![setIn](https://user-images.githubusercontent.com/60688750/80929699-767dc000-8dae-11ea-8d82-216a2915c508.png)
 
