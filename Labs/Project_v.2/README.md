@@ -29,27 +29,27 @@ Komponent top sa skladá z jednotlivých častí, sú to comparator, driver_7seg
 ![PWM](https://user-images.githubusercontent.com/60688750/80929425-2aca1700-8dac-11ea-9450-1ef900c9ec0b.jpg)
 
 ### 4.Simulácia :
-[Obrázok simulácie - 1] 
+##### [Obrázok simulácie - 1] 
 Môžeme vidieť, že signál seconds, nám ukazuje hodnotu, ktorú sme si "natočili" (nastavili) rotačným enkodérom, v našom prípade to je hodnota 8 (1000). Ďalej môžeme sledovať to, že tlačítko sme stlačili, čiže prešlo do aktívneho stavu, do 0. Stlačenie tlačidla vyvolalo spustenie časovača, odpočtu od nastavenej hodnoty (countinStart). Taktiež to má vplyv na pomocné signály ledHelp 2 a ledHelp. Stlačenie tlačidla takisto vyvolalo zaktivizovanie signálu btnFlag, ktorý je aktívny len počas aktívnej úrovne btn.  Keď už tlačidlo pustíme a znova prejde do neaktívneho stavu (do 1), tak vidíme, že to má vplyv na signál LED a to konkrétne taký, že môžeme pozorovať začiatok PWM procesu. 
 
 ![Sim 1](https://user-images.githubusercontent.com/60688750/80929459-8694a000-8dac-11ea-9449-cdccbc88ca80.png)
 
 
-[Obrázok simulácie - 2] 
+##### [Obrázok simulácie - 2] 
 Na tomto obrázku simulácie môžeme vidieť zmeny komparačnej úrovne, ktorú popisuje signál setIn a spoločne s týmto môžeme sledovať začiatok procesu PWM čo znázorňuje signál led. LED najskôr svieti na 100% a potom sa postupne zháša. Tento jav vidíme v simulácii tak, že signál led je väčšinu času v hodnote 0 a pulzy do hodnoty 1 sú len veľmi úzke. 
 ![Sim 2](https://user-images.githubusercontent.com/60688750/80929470-9318f880-8dac-11ea-9a60-44d80a41a805.png)
 
-[Obrázok simulácie - 3] 
+##### [Obrázok simulácie - 3] 
 Pozorujeme už len postupné zhášanie LED. LED sa čím ďalej tým viac ustaluje neaktívnej úrovni (1), čo má za následok, že LEDka sa viac a viac stmavuje.
 
 ![Sim 3](https://user-images.githubusercontent.com/60688750/80929650-0a9b5780-8dae-11ea-844e-59eb6e5405dd.png)
 
-[Obrázok simulácie - 4] 
+##### [Obrázok simulácie - 4] 
 LED je už takmer úplne ustálená v hodnote 1, čiže už takmer vôbec nesvieti.
 
 ![Sim 4](https://user-images.githubusercontent.com/60688750/80929664-2999e980-8dae-11ea-82fc-4ebaf909cdd7.png)
 
-[Obrázok simulácie - 5] 
+##### [Obrázok simulácie - 5] 
 Vidíme, že komparačná úroveň dosiahla "0000000000", čo znamená, že je úplne na minime. Tým pádom musí byť LED už úplne zhasnutá, to môžeme vidieť na signále led, že teraz je už úplne ustálená v hodnote 1.
 
 ![setIn](https://user-images.githubusercontent.com/60688750/80929699-767dc000-8dae-11ea-8d82-216a2915c508.png)
