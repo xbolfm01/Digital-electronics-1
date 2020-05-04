@@ -5,7 +5,7 @@
 =============================================================================
 
 ## Zadanie projektu :
-PWM stmievač s nastaviteľnou dobou načasovania s rotačným enkoderom KY-040 s tlačítkom. Po uplynutí zadanej doby sa výstup zo 100% plynulo stlmí na nulu.
+## PWM stmievač s nastaviteľnou dobou načasovania s rotačným enkoderom KY-040 s tlačítkom. Po uplynutí zadanej doby sa výstup zo 100% plynulo stlmí na nulu.
 
 Problém s PWM bol spôsobený len malou chybou v kóde v súbore top.vhd. Konkrétne bola chyba, že v binary_cnt2 bola do vstupu srst_n_i privedená '1', lenže to zaručovalo to, že tento čítač stále bežal a stále sledoval stav referenčnej úrovne a porovnával ju s komparačnou, čiže PWM nefungovala. Po kontrolách kódu som do vstupu srst_n_i priradil signál btn, práve preto, aby tento časovač bežal len pri zmene signálu btn 0 -> 1 (z aktívnej úrovne do neaktívnej), to znamená, že keď tlačidlo pustíme, tým pádom začne časovanie od nastavenej hodnoty a začne aj generovanie referenčného signálu a jeho sledovanie binary_cnt2. Po tejto oprave už PWM na led fungovalo úplne bez problému, viď foto simulácie. 
 ### Foto opravy v kóde : 
