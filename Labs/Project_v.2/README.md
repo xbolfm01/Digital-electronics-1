@@ -41,7 +41,7 @@ Komponent top sa skladá z jednotlivých častí, sú to comparator, driver_7seg
 
 ### 4.Simulácia :
 ##### [Obrázok simulácie - 1] 
-Môžeme vidieť, že signál seconds, nám ukazuje hodnotu, ktorú sme si "natočili" (nastavili) rotačným enkodérom, v našom prípade to je hodnota 8 (1000). Ďalej môžeme sledovať to, že tlačítko sme stlačili, čiže prešlo do aktívneho stavu, do 0. Stlačenie tlačidla vyvolalo spustenie časovača, odpočtu od nastavenej hodnoty (countinStart). Taktiež to má vplyv na pomocné signály ledHelp 2 a ledHelp. Stlačenie tlačidla takisto vyvolalo zaktivizovanie signálu btnFlag, ktorý je aktívny len počas aktívnej úrovne btn.  Keď už tlačidlo pustíme a znova prejde do neaktívneho stavu (do 1), tak vidíme, že to má vplyv na signál LED a to konkrétne taký, že môžeme pozorovať začiatok PWM procesu. 
+Môžeme vidieť, že signál seconds, nám ukazuje hodnotu, ktorú sme si "natočili" (nastavili) rotačným enkodérom, v našom prípade to je hodnota 8 (1000). Ďalej môžeme sledovať to, že tlačítko sme stlačili, čiže prešlo do aktívneho stavu, do 0. Stlačenie tlačidla vyvolalo spustenie časovača, odpočtu od nastavenej hodnoty (countingStart). Taktiež to má vplyv na pomocné signály ledHelp 2 a ledHelp. Stlačenie tlačidla takisto vyvolalo zaktivizovanie signálu btnFlag, ktorý je aktívny len počas aktívnej úrovne btn.  Keď už tlačidlo pustíme a znova prejde do neaktívneho stavu (do 1), tak vidíme, že to má vplyv na signál LED a to konkrétne taký, že môžeme pozorovať začiatok PWM procesu. 
 
 ![Sim 1](https://user-images.githubusercontent.com/60688750/80929459-8694a000-8dac-11ea-9449-cdccbc88ca80.png)
 
@@ -66,7 +66,7 @@ Vidíme, že komparačná úroveň dosiahla "0000000000", čo znamená, že je �
 ![setIn](https://user-images.githubusercontent.com/60688750/80929699-767dc000-8dae-11ea-8d82-216a2915c508.png)
 
 ### 5. Záver :
-Po stlačení tlačidla, sa spustí časovač na odpočet od nastavenej hodnoty. Následne na to, sa spustí proces PWM a LEDka sa začne zhášať, čo môžeme vidieť na simulácii.
+Po stlačení tlačidla, sa spustí časovač na odpočet od nastavenej hodnoty. Následne na to, sa spustí proces PWM a LEDka sa začne zhášať, čo môžeme vidieť na simulácii. Ako bolo spomenuté v úvode dôvod nefungovania PWM bol spôsobený len malou chybou v kóde. Po jej odstránení sme mohli vidieť, že už proces PWM funguje tak ako má. 
 
 ### 6. Video :
 Na videu simulujeme natočenie enkóderom tlačidlami, ktorými nastavíme čas.                                                                
