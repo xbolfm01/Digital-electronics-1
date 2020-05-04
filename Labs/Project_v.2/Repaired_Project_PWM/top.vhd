@@ -6,19 +6,19 @@ library UNISIM;
 use UNISIM.VComponents.all;
 entity top is
     Port ( 
-				--Inputs 
-			  clk_i : in  STD_LOGIC;
+	    --Inputs 
+	   clk_i : in  STD_LOGIC;
            enc_value_A : in  STD_LOGIC;										
            enc_value_B  : in  STD_LOGIC;										
            btn : in  STD_LOGIC :='1';
 				
-			  -- Outputs
+	    -- Outputs
            led : out  STD_LOGIC;
            anode : out  STD_LOGIC_VECTOR (3 downto 0);
            segment : out  STD_LOGIC_VECTOR (6 downto 0);
            dp : out  STD_LOGIC
 
-			  );
+	 );
 end top;
 
 architecture Behavioral of top is
@@ -49,9 +49,9 @@ begin
 comparator : entity work.comparator
 generic map(nBitRefIn => 10, nBitSetIn => 10)
 port map (
-				refIn => refIn,
-				setIn => setIn,
-				output	=> ledHelp2
+		refIn => refIn,
+		setIn => setIn,
+		output	=> ledHelp2
 			);
 
 display : entity work.driver_7seg
@@ -94,15 +94,17 @@ port map (
 				cnt_o => afterCounter
 			);
 
+-- Counter for referential level.
 bin_cnt2 : entity work.counter_down
 generic map ( g_NBIT => 10)
 port map (
-				srst_n_i => btn,		-- here was : srst_n_i => '1' before the correction
+				srst_n_i => btn -- here was : srst_n_i => '1' before the correction
 				en_i => '1',
 				clk_i => clk_i,
 				cnt_o => refIn
 			);
 
+--Counter for comparational level.
 bin_cnt3 : entity work.counter_down
 generic map ( g_NBIT => 10)
 port map (
@@ -145,9 +147,9 @@ begin
 	if (clk_i'event and clk_i='1') then 
 	
 	if btnFlag = '1' then
-			countingStart <= '1';					-- enable counter
+			countingStart <= '1';		-- enable counter
 			countingDone <= '0';
-			ledHelp <= '0';							-- light up LED
+			ledHelp <= '0';			-- light up LED
 		
 		elsif (afterCounter = counter_disp) then	
 			-- counter_disp goes to zero then LED starts dim
@@ -155,7 +157,7 @@ begin
 			
 		elsif(setIn = x"000") then	
 			-- LED is turned off
-				countingStart <= '0';					-- turning off the counter which countes seconds
+				countingStart <= '0';	-- turning off the counter which countes seconds
 				countingDone <= '1';			
 				ledHelp <= '1';
 		
