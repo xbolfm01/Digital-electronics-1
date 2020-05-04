@@ -2,8 +2,8 @@
 ## Zadanie projektu :
 PWM stmievač s nastaviteľnou dobou načasovania s rotačným enkoderom KY-040 s tlačítkom. Po uplynutí zadanej doby sa výstup zo 100% plynulo stlmí na nulu.
 
-##### ----------------------------------------------------------------------------------------------------------------------------------Tento projekt je oproti projektu, ktorý tu bol nahraný vo štvrtok, opravený a funguje tu PWM. Projekt, ktorý bol nahraný vo štvrtok, je na Githube stále nezmenený pod názvom "Project". Tento projekt je len oprava PWM. Opravu PWM si môžeme všimnúť v bode 4 (Simulácie) a v bode 5 (Záver). Nižšie je zdôvodnené prečo PWM nefugovala a ako prebiehal proces jej opravenia. Opravu projektu sme nahrali na Github z dôvodu, že sme sa s predchádzajúcim výsledkom neuspokojili a stále sme hľadali kde by mohla byť chyba. Keď sme chybu našli a odstránili, tak sme chceli aby tu bolo aj toto nové, už správne, riešenie.
-##### ----------------------------------------------------------------------------------------------------------------------------------
+##### -----------------------------------------------------------------------------------------------------------------------------------------------------------Tento projekt je oproti projektu, ktorý tu bol nahraný vo štvrtok, opravený a funguje tu PWM. Projekt, ktorý bol nahraný vo štvrtok, je na Githube stále nezmenený pod názvom "Project". Tento projekt je len oprava PWM. Opravu PWM si môžeme všimnúť v bode 4 (Simulácie) a v bode 5 (Záver). Nižšie je zdôvodnené prečo PWM nefugovala a ako prebiehal proces jej opravenia. Opravu projektu sme nahrali na Github z dôvodu, že sme sa s predchádzajúcim výsledkom neuspokojili a stále sme hľadali kde by mohla byť chyba. Keď sme chybu našli a odstránili, tak sme chceli aby tu bolo aj toto nové, už správne, riešenie.
+##### -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Problém s PWM bol spôsobený len malou chybou v kóde v súbore top.vhd. Konkrétne bola chyba, že v binary_cnt2 bola do vstupu srst_n_i privedená '1', lenže to zaručovalo to, že tento čítač stále bežal a stále sledoval stav referenčnej úrovne a porovnával ju s komparačnou, čiže PWM nefungovala. Po kontrolách kódu som do vstupu srst_n_i priradil signál btn, práve preto, aby tento časovač bežal len pri zmene signálu btn 0 -> 1 (z aktívnej úrovne do neaktívnej), to znamená, že keď tlačidlo pustíme, tým pádom začne časovanie od nastavenej hodnoty a začne aj generovanie referenčného signálu a jeho sledovanie binary_cnt2. Po tejto oprave už PWM na led fungovalo úplne bez problému, viď foto simulácie. 
 ### Foto opravy v kóde : 
@@ -22,7 +22,7 @@ Slúži nám pre odpočítavanie od nastavenej hodnoty. Ak je reset aktívny, ta
 Tento čítač odštartujeme tým, keď signál countingStart bude mať hodnotu 1, to znamená, že sa začne odpočet nastavenej hodnoty.
 
 #### binary_cnt_2 :
-Tento čítač beží stále. Je taktovaný hodinovým signálom. Slúži na čítanie hodnoty refIn hodnoty referenčného signálu, číta od vrchu dole – viď obrázok PWM. Výstupom tohto čítaču je teda hodnota signálu refIn.
+Tento čítač beží stále. Je taktovaný hodinovým signálom. Slúži na čítanie hodnoty refIn hodnoty referenčného signálu, číta od vrchu dole – viď obrázok PWM. Výstupom tohto čítaču je teda hodnota signálu refIn.-----
 
 #### binary_cnt_3 :
 Určuje hodnotu komparačnej úrovne, to znamená, že na základe jeho výstupu je dané ako dlho LED bude svietiť. Tento čítač sa spustí ak signál countinDone bude mať hodnotu 1, čiže keď sa dopočíta do nuly z nastavenej hodnoty. Čítač sa dekrementuje každú ms. Ak dopočíta do svojej maximálnej hodnoty , to znamená, že komparačná úroveň je úplne na najnižšom bode (setIn = x“000“) a LED je vypnutá. Po tomto procese sa na signál countingDone nastaví hodnota 0 a čítač sa vypne.
