@@ -58,11 +58,11 @@ Vidíme, že komparačná úroveň dosiahla "0000000000", čo znamená, že je �
 Po stlačení tlačidla, sa spustí časovač na odpočet od nastavenej hodnoty. Následne na to, sa spustí proces PWM a LEDka sa začne zhášať, čo môžeme vidieť na simulácii.
 
 ### 6. Video :
-Na videu simulujeme natočenie enkóderom tlačidlami, ktorými nastavíme čas. 
+Na videu simulujeme natočenie enkóderom tlačidlami, ktorými nastavíme čas.                                                                
 https://www.youtube.com/watch?v=I9aNll9A6zU
 
 ### 7. Zdroje :
-Predchádzajúce cvičenia od pána doc.Frýzu
-https://www.digikey.com/eewiki/pages/viewpage.action?pageId=62259228
-https://en.wikipedia.org/wiki/Pulse-width_modulation
+Predchádzajúce cvičenia od pána doc.Frýzu                                                                                                 
+https://www.digikey.com/eewiki/pages/viewpage.action?pageId=62259228                                                                                                                     
+https://en.wikipedia.org/wiki/Pulse-width_modulation                                                                                           
 https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/
