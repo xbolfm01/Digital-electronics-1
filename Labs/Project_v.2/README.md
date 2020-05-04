@@ -1,7 +1,7 @@
 # Projekt 
 
 =============================================================================
-### Tento projekt je oproti projektu, ktorý tu bol nahraný vo štvrtok, opravený a funguje tu PWM. Projekt, ktorý bol nahraný vo štvrtok, je na Githube stále nezmenený pod názvom "Project". Tento projekt je len oprava PWM. Opravu PWM si môžeme všimnúť v bode 4 (Simulácie) a v bode 5 (Záver). Nižšie je zdôvodnené prečo PWM nefungovala a ako prebiehal proces jej opravenia. Opravu projektu sme nahrali na Github z dôvodu, že sme sa s predchádzajúcim výsledkom neuspokojili a stále sme hľadali kde by mohla byť chyba. Keď sme chybu našli a odstránili, tak sme chceli aby tu bolo aj toto nové, už správne, riešenie.
+### Tento projekt je oproti projektu, ktorý tu bol nahraný vo štvrtok, opravený a funguje tu PWM. Projekt, ktorý bol nahraný vo štvrtok, je na Githube stále nezmenený pod názvom "Project". Tento projekt je sfunkčnenie PWM. Fungovanie PWM si môžeme všimnúť v bode 4 (Simulácie) a v bode 5 (Záver). Nižšie je zdôvodnené prečo PWM nefungovala a ako prebiehal proces jej opravenia. Opravu projektu sme nahrali na Github z dôvodu, že sme sa s predchádzajúcim výsledkom neuspokojili a stále sme hľadali kde by mohla byť chyba. Keď sme chybu našli a odstránili, tak sme chceli aby tu bolo aj toto nové, už správne, riešenie.
 =============================================================================
 
 ## Zadanie projektu :
