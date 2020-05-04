@@ -3,7 +3,7 @@
 PWM stmievač s nastaviteľnou dobou načasovania s rotačným enkoderom KY-040 s tlačítkom. Po uplynutí zadanej doby sa výstup zo 100% plynulo stlmí na nulu.
 
 
-#### 1. Popis kódu :
+### 1. Popis kódu :
 Comparator :
 Slúži nám na porovnávanie úrovní pri postupnom zhášaní LED. Vstupy do comparatoru sú refIn a setIn. Vstupom setIn nastavujeme úroveň. Tam kde je setIn vyššia ako refIn, má výstupná premenná hodnotu 0 (LED svieti), v opačnom prípade má hodnotu 1 (LED nesvieti). Viď obrázok PWM.
 
